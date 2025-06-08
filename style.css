@@ -1,0 +1,69 @@
+/* Importa a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F9FC;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Novo estilo do loader inspirado na referência */
+.loader {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+}
+
+.loader::after,
+.loader::before {
+    content: '';
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #0369a1; /* Azul do tema */
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: animloader 2s linear infinite;
+}
+
+.loader::after {
+    animation-delay: 1s;
+}
+
+@keyframes animloader {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.objective-row select {
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+footer {
+    border-top: 1px solid #e5e7eb;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Melhora a aparência do input de semana no Chrome/Edge */
+input[type="week"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity .2s;
+}
+
+input[type="week"]:hover::-webkit-calendar-picker-indicator {
+    opacity: 1;
+}
